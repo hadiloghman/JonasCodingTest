@@ -89,6 +89,7 @@ namespace DataAccessLayer.Repositories
                 throw ErrorHandled.DuplicateCode(employee.EmployeeCode, nameof(employee));
             //for new company set SiteId
             employee.SiteId = Guid.NewGuid().ToString();
+            employee.LastModified = DateTime.Now;
             return await _employeeDbWrapper.InsertAsync(employee);
         }
 

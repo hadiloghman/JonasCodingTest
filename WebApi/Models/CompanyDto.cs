@@ -15,6 +15,5 @@ namespace WebApi.Models
         public string EquipmentCompanyCode { get; set; }
         public string Country { get; set; }
         public List<ArSubledgerDto> ArSubledgers { get; set; }
-        public DateTime LastModified { get; set; }
     }
 }

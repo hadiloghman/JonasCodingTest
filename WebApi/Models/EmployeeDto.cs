@@ -13,7 +13,6 @@ namespace WebApi.Models
         public string EmployeeStatus { get; set; }
         public string EmailAddress { get; set; }
         public string Phone { get; set; }
-        public DateTime LastModified { get; set; }
 
         /// <summary>
         /// This property is derived from the Company class. 
