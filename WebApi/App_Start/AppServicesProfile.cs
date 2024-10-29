@@ -14,7 +14,8 @@ namespace WebApi
         private void CreateMapper()
         {
             CreateMap<BaseInfo, BaseDto>();
-            CreateMap<CompanyInfo, CompanyDto>();
+            CreateMap<CompanyInfo, CompanyDto>().ReverseMap();
+            CreateMap<EmployeeInfo, EmployeeDto>().ReverseMap();
             CreateMap<ArSubledgerInfo, ArSubledgerDto>();
         }
     }

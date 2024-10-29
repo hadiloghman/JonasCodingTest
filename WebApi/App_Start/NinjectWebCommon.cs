@@ -10,25 +10,32 @@ using DataAccessLayer.Repositories;
 namespace WebApi.App_Start
 {
     using System;
+    using System.IO;
     using System.Web;
     using System.Web.Http;
+    using System.Web.Http.ExceptionHandling;
+    using System.Web.Http.Filters;
     using BusinessLayer.Model.Interfaces;
     using BusinessLayer.Services;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
+    using Ninject.Extensions.Logging;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using Ninject.Web.WebApi.FilterBindingSyntax;
     using Ninject.WebApi.DependencyResolver;
+    using Serilog;
+    using WebApi.Middleware;
 
-    public static class NinjectWebCommon 
+    public static class NinjectWebCommon
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application.
         /// </summary>
-        public static void Start() 
+        public static void Start()
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
@@ -54,7 +61,7 @@ namespace WebApi.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-                
+
                 GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
                 RegisterServices(kernel);
                 return kernel;
@@ -82,9 +89,42 @@ namespace WebApi.App_Start
                 });
                 return config.CreateMapper();
             }).InSingletonScope();
-            kernel.Bind<ICompanyService>().To<CompanyService>();
-            kernel.Bind<ICompanyRepository>().To<CompanyRepository>();
+
+            kernel.Bind<Serilog.ILogger>().ToMethod(cfg =>
+            {
+
+                Log.Logger = new LoggerConfiguration().WriteTo.Console()
+                    .WriteTo.File(
+                            path: Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs", "logs-.log"),
+                            rollingInterval: RollingInterval.Day,
+                            outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}"
+                            ).CreateLogger();
+                return Log.Logger;
+            }).InSingletonScope();
+
+
+            kernel.BindHttpFilter<GlobalHandleExceptionFilter>(FilterScope.Global)
+                    .When(r => true)
+                    .WithConstructorArgument("master", string.Empty)
+                    .WithConstructorArgument("view", "Error");
+
+
+            kernel.Bind<CompanyRepository>().ToSelf().InSingletonScope();
+            kernel.Bind<ICompanyRepository>().ToMethod(context => context.Kernel.Get<CompanyRepository>());
+
+            kernel.Bind<CompanyService>().ToSelf().InSingletonScope();
+            kernel.Bind<ICompanyService>().ToMethod(context => context.Kernel.Get<CompanyService>());
+
+            kernel.Bind<EmployeeRepository>().ToSelf().InSingletonScope();
+            kernel.Bind<IEmployeeRepository>().ToMethod(context => context.Kernel.Get<EmployeeRepository>());
+
+            kernel.Bind<EmployeeService>().ToSelf().InSingletonScope();
+            kernel.Bind<IEmployeeService>().ToMethod(context => context.Kernel.Get<EmployeeService>());
+
             kernel.Bind(typeof(IDbWrapper<>)).To(typeof(InMemoryDatabase<>));
+
+            
+
         }
     }
 }

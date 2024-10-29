@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace BusinessLayer.Model.Models
 {
     public class CompanyInfo : BaseInfo
     {
+        [Required]
+        [MaxLength(100)]
         public string CompanyName { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
