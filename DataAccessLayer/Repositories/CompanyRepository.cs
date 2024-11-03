@@ -16,7 +16,7 @@ namespace DataAccessLayer.Repositories
 
         public CompanyRepository(
             IDbWrapper<Company> companyDbWrapper)
-            //IDbWrapper<Employee> employeeRepository)
+        //IDbWrapper<Employee> employeeRepository)
         {
             _companyDbWrapper = companyDbWrapper;
             //this._employeeDbWrapper = employeeRepository;
@@ -29,17 +29,23 @@ namespace DataAccessLayer.Repositories
 
         public async Task<Company> GetByCode(string companyCode)
         {
-            if (string.IsNullOrEmpty(companyCode))
-                throw ErrorHandled.ArgumentNotSpecified(nameof(companyCode));
-            return (await _companyDbWrapper.FindAsync(t => t.CompanyCode.Equals(companyCode)))?.FirstOrDefault();
+            return (await _companyDbWrapper.FindAsync(t => t.CompanyCode.Equals(companyCode, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
+        }
+
+        public async Task<Company> GetBySiteId(string siteId)
+        {
+            return (await _companyDbWrapper.FindAsync(t => t.SiteId.Equals(siteId, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
+        }
+
+        public async Task<Company> GetBySiteIdAndCode(string siteId, string companyCode)
+        {
+            return (await _companyDbWrapper.FindAsync(t => t.SiteId.Equals(siteId, StringComparison.InvariantCultureIgnoreCase)
+            && t.CompanyCode.Equals(companyCode, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
         }
 
         public async Task<bool> SaveCompany(Company company)
         {
-            bool updateRequested = !string.IsNullOrEmpty(company.SiteId);
-            var itemRepo = (await _companyDbWrapper.FindAsync(t =>
-                t.SiteId.Equals(company.SiteId)
-                && t.CompanyCode.Equals(company.CompanyCode)))?.FirstOrDefault();
+            var itemRepo = (await this.GetBySiteIdAndCode(company.SiteId, company.CompanyCode));
             if (itemRepo != null)
             {
                 itemRepo.CompanyName = company.CompanyName;
@@ -54,18 +60,6 @@ namespace DataAccessLayer.Repositories
                 itemRepo.LastModified = company.LastModified;
                 return await _companyDbWrapper.UpdateAsync(itemRepo);
             }
-            else if (updateRequested)
-            {
-                //**************Note****************
-                // Attempting to update an item:
-                // - If no item exists with the specified companyCode, throw an exception.
-                // - Note: GetCompany retrieves data by companyCode only, whereas saving requires both siteId and companyCode.
-                throw ErrorHandled.NotFound(company.SiteId, nameof(company));
-
-            }
-            var entryDuplicate = await GetByCode(company.CompanyCode);
-            if (entryDuplicate != null)
-                throw ErrorHandled.DuplicateCode(company.CompanyCode, nameof(company));
             //for new company set SiteId
             company.SiteId = Guid.NewGuid().ToString();
             company.LastModified = DateTime.Now;
@@ -74,16 +68,6 @@ namespace DataAccessLayer.Repositories
 
         public async Task DeleteCompany(string id)
         {
-
-            if (string.IsNullOrEmpty(id))
-                throw ErrorHandled.ArgumentNotSpecified(nameof(id));
-            var entry = (await this._companyDbWrapper.FindAsync(o => o.SiteId.Equals(id, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
-            if (entry == null)
-                throw ErrorHandled.NotFound(id, nameof(Company));
-
-            //var employees = (await this._employeeDbWrapper.FindAsync(o => o.CompanyCode.Equals(entry.CompanyCode, StringComparison.InvariantCultureIgnoreCase))).AsEnumerable();
-            //if (employees.Count() > 0)
-            //    throw ErrorHandled.RelationExists(nameof(Company), id, nameof(Employee));
             await _companyDbWrapper.DeleteAsync(o => o.SiteId.Equals(id, StringComparison.InvariantCultureIgnoreCase));
 
         }

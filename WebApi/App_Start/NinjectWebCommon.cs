@@ -104,10 +104,8 @@ namespace WebApi.App_Start
 
 
             kernel.BindHttpFilter<GlobalHandleExceptionFilter>(FilterScope.Global)
-                    .When(r => true)
-                    .WithConstructorArgument("master", string.Empty)
-                    .WithConstructorArgument("view", "Error");
-
+                    .When(r => true);
+            
 
             kernel.Bind<CompanyRepository>().ToSelf().InSingletonScope();
             kernel.Bind<ICompanyRepository>().ToMethod(context => context.Kernel.Get<CompanyRepository>());

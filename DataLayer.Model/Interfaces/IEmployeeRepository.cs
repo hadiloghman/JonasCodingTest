@@ -13,7 +13,8 @@ namespace DataAccessLayer.Model.Interfaces
         Task<Employee> GetByCode(string employeeCode);
         Task<bool> Save(Employee employee);
         Task Delete(string EmployeeCode);
-
         Task<IEnumerable<Employee>> GetEmployeesByCompanyCode(string companyCode);
+        Task<Employee> GetBySiteId(string siteId);
+        Task<Employee> GetBySiteIdAndCode(string siteId, string employeeCode);
     }
 }

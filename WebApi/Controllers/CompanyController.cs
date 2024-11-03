@@ -59,5 +59,6 @@ namespace WebApi.Controllers
         {
             await _companyService.DeleteCompany(id);
         }
+
     }
 }

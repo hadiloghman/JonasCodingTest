@@ -12,7 +12,8 @@ namespace DataAccessLayer.Model.Interfaces
         Task<IEnumerable<Company>> GetAll();
         Task<Company> GetByCode(string companyCode);
         Task<bool> SaveCompany(Company company);
-
         Task DeleteCompany(string companyCode);
+        Task<Company> GetBySiteId(string siteId);
+        Task<Company> GetBySiteIdAndCode(string siteId, string companyCode);
     }
 }

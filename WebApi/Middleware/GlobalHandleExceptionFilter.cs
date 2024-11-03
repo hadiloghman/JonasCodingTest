@@ -12,15 +12,12 @@ using System.Web.Http.Filters;
 using System.Web.UI.WebControls;
 using DataAccessLayer.Model.Models;
 using Newtonsoft.Json;
+using Ninject.Activation;
 
 namespace WebApi.Middleware
 {
     public class GlobalHandleExceptionFilter : IExceptionFilter
     {
-        private string _view;
-        private string _master;
-
-
         ILogger _logger;
         public GlobalHandleExceptionFilter(ILogger logger)
         {
@@ -32,8 +29,26 @@ namespace WebApi.Middleware
             HttpActionExecutedContext filterContext,
             CancellationToken cancellationToken)
         {
-            var trackingNumber = "";
-            var exception = filterContext.Exception;
+            var (statusCode, err, trackingNumber) = createErrorResponseJson(filterContext.Exception);
+            _logger.Error(err, $"Exception is occured Tracking Number: {trackingNumber}");
+            
+            filterContext.Response = filterContext.Request.CreateResponse(
+                statusCode,
+                new
+                {
+                    err.Title,
+                    err.TrackingNumber,
+                    err.Description
+                },
+                "application/json"
+            );
+
+            await Task.CompletedTask;
+        }
+
+        public static (HttpStatusCode, ErrorGeneral, string) createErrorResponseJson(Exception exception)
+        {
+            string trackingNumber;
             HttpStatusCode statusCode;
             ErrorGeneral err;
             if (exception is ErrorHandled)
@@ -51,24 +66,8 @@ namespace WebApi.Middleware
                 };
             }
             trackingNumber = err.TrackingNumber;
-            this._logger.Error(filterContext.Exception, $"Exception is occured Tracking Number: {trackingNumber}");
 
-
-
-            filterContext.Response = filterContext.Request.CreateResponse(
-                statusCode,
-                new
-                {
-                    err.Title,
-                    err.TrackingNumber,
-                    err.Description
-                },
-                "application/json"
-            );
-
-            await Task.CompletedTask;
+            return (statusCode, err, trackingNumber);
         }
-
-
     }
 }

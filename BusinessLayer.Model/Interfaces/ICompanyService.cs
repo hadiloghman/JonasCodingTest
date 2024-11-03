@@ -10,6 +10,5 @@ namespace BusinessLayer.Model.Interfaces
         Task<CompanyInfo> GetCompanyByCode(string companyCode);
         Task DeleteCompany(string id);
         Task SaveCompany(CompanyInfo companyInfo);
-
     }
 }

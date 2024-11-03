@@ -1,0 +1,350 @@
+2024-11-03 11:43:01 [Error] Exception is occured Tracking Number: c7d41226-97d5-4e94-8928-6d158e5aa20e
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<SaveCompany>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 78
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.CompanyController.<Post>d__6.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 46
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 11:44:35 [Error] Exception is occured Tracking Number: 00d0443d-8ee8-4fe7-b529-db1c0e329e9c
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.EmployeeService.<Save>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\EmployeeService.cs:line 77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.EmployeeController.<Put>d__8.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\EmployeeController.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 11:45:24 [Error] Exception is occured Tracking Number: ce729027-62e0-4580-9a06-539bb3d2d572
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.EmployeeService.<Save>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\EmployeeService.cs:line 77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.EmployeeController.<Put>d__8.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\EmployeeController.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 11:45:49 [Error] Exception is occured Tracking Number: e59fcf80-b3d7-4dd0-a986-57cb523840d5
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.EmployeeService.<Save>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\EmployeeService.cs:line 77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.EmployeeController.<Put>d__8.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\EmployeeController.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 11:46:27 [Error] Exception is occured Tracking Number: 43638aec-6497-4a1f-a2e1-287d1edbd895
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.EmployeeService.<Save>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\EmployeeService.cs:line 77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.EmployeeController.<Put>d__8.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\EmployeeController.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 11:52:12 [Error] Exception is occured Tracking Number: b6ecb92a-3b14-4c02-b425-54cc89b80eb4
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<GetCompanyByCode>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<Get>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 37
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 12:02:22 [Error] Exception is occured Tracking Number: f3c339e6-4325-4a1b-a42f-1d003c2bad5e
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<GetCompanyByCode>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<Get>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 37
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 12:05:23 [Error] Exception is occured Tracking Number: 2e7edd31-1ae1-46b9-a904-221ec07654cf
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<GetCompanyByCode>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<Get>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 12:12:20 [Error] Exception is occured Tracking Number: 1bfd9218-2803-4678-8f38-4b88d39b432e
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<GetCompanyByCode>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<Get>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 37
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 12:17:11 [Error] Exception is occured Tracking Number: 982fed1d-a79f-4643-ae2e-576e6d792c26
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<ttt>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<Get>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 38
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 12:18:17 [Error] Exception is occured Tracking Number: 81878ce2-9ffb-46c8-baff-971bf63c21b3
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<ttt>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<Get>d__5.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 38
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__1`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 12:29:11 [Error] An unhandled exception occurred
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<ttt>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<ttt>d__9.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 66
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+2024-11-03 12:48:34 [Error] Exception is occured Tracking Number: 3dc2ba56-5dc4-48aa-9cd8-af92a8802978
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<ttt>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<ttt>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+2024-11-03 12:57:22 [Error] asjldajslkjaklsd
+2024-11-03 12:59:17 [Error] asjldajslkjaklsd
+2024-11-03 12:59:46 [Error] asjldajslkjaklsd
+2024-11-03 12:59:51 [Error] asjldajslkjaklsd
+2024-11-03 13:00:04 [Error] asjldajslkjaklsd
+2024-11-03 13:07:30 [Error] Exception is occured Tracking Number: 6a9dad5e-bef2-4ec6-ad62-81e80b875d4a
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<ttt>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\BusinessLayer\Services\CompanyService.cs:line 62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at WebApi.Controllers.CompanyController.<ttt>d__9.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 66
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Web.Util.SynchronizationHelper.SafeWrapCallback(Action action)
+2024-11-03 13:13:11 [Error] Exception is occured Tracking Number: 31847bfe-3732-4032-9107-ca819fe20828
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.CompanyService.<SaveCompany>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.CompanyController.<Put>d__7.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\CompanyController.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2024-11-03 13:14:47 [Error] Exception is occured Tracking Number: d944b876-de60-4b63-adbb-f711a3e4363e
+DataAccessLayer.Model.Models.ErrorHandled: Exception of type 'DataAccessLayer.Model.Models.ErrorHandled' was thrown.
+   at BusinessLayer.Services.EmployeeService.<Save>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at WebApi.Controllers.EmployeeController.<Put>d__8.MoveNext() in E:\Application\temp\JonasCodingTest\WebApi\Controllers\EmployeeController.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()

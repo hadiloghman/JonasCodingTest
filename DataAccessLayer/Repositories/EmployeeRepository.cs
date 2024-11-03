@@ -20,12 +20,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task Delete(string id)
         {
-            if (string.IsNullOrEmpty(id))
-                throw ErrorHandled.ArgumentNotSpecified(nameof(id));
-            var entry = (await this._employeeDbWrapper.FindAsync(o => o.SiteId.Equals(id, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
-            if (entry == null)
-                throw ErrorHandled.NotFound(id, nameof(Employee));
-            await this._employeeDbWrapper.DeleteAsync(o => o.SiteId == entry.SiteId.ToString());
+            await this._employeeDbWrapper.DeleteAsync(o => o.SiteId.Equals(id, StringComparison.InvariantCultureIgnoreCase));
         }
 
         public async Task<IEnumerable<Employee>> GetAll()
@@ -41,8 +36,6 @@ namespace DataAccessLayer.Repositories
 
         public async Task<Employee> GetByCode(string employeeCode)
         {
-            if (string.IsNullOrEmpty(employeeCode))
-                throw ErrorHandled.ArgumentNotSpecified(nameof(employeeCode));
             var employee = (await this._employeeDbWrapper.FindAsync(o => o.EmployeeCode.Equals(employeeCode)))?.FirstOrDefault();
             if (employee != null && !string.IsNullOrEmpty(employee.CompanyCode))
             {
@@ -51,19 +44,20 @@ namespace DataAccessLayer.Repositories
             return employee;
         }
 
+        public async Task<Employee> GetBySiteId(string siteId)
+        {
+            return (await _employeeDbWrapper.FindAsync(t => t.SiteId.Equals(siteId, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
+        }
+
+        public async Task<Employee> GetBySiteIdAndCode(string siteId, string employeeCode)
+        {
+            return (await _employeeDbWrapper.FindAsync(t => t.SiteId.Equals(siteId, StringComparison.InvariantCultureIgnoreCase)
+            && t.EmployeeCode.Equals(employeeCode, StringComparison.InvariantCultureIgnoreCase)))?.FirstOrDefault();
+        }
+
         public async Task<bool> Save(Employee employee)
         {
-            if (string.IsNullOrEmpty(employee.CompanyCode))
-                throw ErrorHandled.ArgumentNotSpecified("CompanyCode");
-            var entryCompany = await _companyRepository.GetByCode(employee.CompanyCode);
-            if (entryCompany == null)
-                throw ErrorHandled.NotFound(employee.CompanyCode, nameof(Company));
-
-            bool updateRequested = !string.IsNullOrEmpty(employee.SiteId);
-
-            var entry = (await _employeeDbWrapper.FindAsync(o =>
-               o.SiteId.Equals(employee.SiteId)
-               && o.EmployeeCode.Equals(employee.EmployeeCode)))?.FirstOrDefault();
+            var entry = await this.GetBySiteIdAndCode(employee.SiteId, employee.EmployeeCode);
             if (entry != null)
             {
                 entry.EmployeeCode = employee.EmployeeCode;
@@ -73,20 +67,11 @@ namespace DataAccessLayer.Repositories
                 entry.EmailAddress = employee.EmailAddress;
                 entry.Phone = employee.Phone;
                 entry.LastModified = DateTime.Now;
+                entry.CompanyCode = employee.CompanyCode;
                 return await _employeeDbWrapper.UpdateAsync(entry);
             }
-            else if (updateRequested)
-            {
-                //**************Note****************
-                // Attempting to update an item:
-                // - If no item exists with the specified companyCode, throw an exception.
-                // - Note: GetCompany retrieves data by companyCode only, whereas saving requires both siteId and companyCode.
-                throw ErrorHandled.NotFound(employee.SiteId, nameof(Employee));
 
-            }
-            var entryDuplicate = await GetByCode(employee.EmployeeCode);
-            if (entryDuplicate != null)
-                throw ErrorHandled.DuplicateCode(employee.EmployeeCode, nameof(employee));
+
             //for new company set SiteId
             employee.SiteId = Guid.NewGuid().ToString();
             employee.LastModified = DateTime.Now;
@@ -95,7 +80,7 @@ namespace DataAccessLayer.Repositories
 
         public async Task<IEnumerable<Employee>> GetEmployeesByCompanyCode(string companyCode)
         {
-            return (await this._employeeDbWrapper.FindAsync(o => o.CompanyCode == companyCode)).AsEnumerable();
+            return (await this._employeeDbWrapper.FindAsync(o => o.CompanyCode.Equals(companyCode, StringComparison.InvariantCultureIgnoreCase))).AsEnumerable();
         }
     }
 }
