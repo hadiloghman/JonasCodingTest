@@ -36,7 +36,6 @@ namespace WebApi
                 err.Description
             };
 
-            // Convert the error object to JSON
             var jsonError = new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(errorResponse);
             Response.Write(jsonError);
             Response.End();
